@@ -1,0 +1,68 @@
+@import '../../index.css';
+
+.ds-navbar {
+    width: 100%;
+    background: var(--primary-ds-color);
+}
+.ds-nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0.9rem;
+
+}
+.left-nav-side,.right-nav-side {
+    display: flex;
+    align-content: center;
+}
+ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+.ds-logo-container img {
+    height: 6.6em;
+    padding: 1.5em;
+
+}
+.ds-nav-links , .right-nav-side {
+    margin : 10px 0;
+}
+.ds-nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1em 2em;
+    gap:1.4rem;
+}
+.ds-profile-icon-list {
+    display:flex;
+    justify-content: center;
+    gap:0.6rem;
+}
+.ds-dropdown-toggle {
+    color:white;
+    cursor: pointer;
+    display: flex;
+    gap:0.4rem
+
+}
+
+.ds-dropdown-toggle .ds-inline-icon{
+    width: 1em;
+
+
+}
+.ds-sign-icons {
+    display: flex;
+
+}
+.ds-icon {
+    width: 1.5em;
+
+}
