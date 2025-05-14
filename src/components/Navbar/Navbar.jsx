@@ -11,10 +11,11 @@ import {
 } from "@heroicons/react/16/solid/index.js";
 import logo from "../../assets/logo.png"
 import {ArrowDownCircleIcon} from "@heroicons/react/16/solid/index.js";
+import {NavLink, useNavigate} from "react-router";
 
 
 export default function CustomNavbar() {
-
+        let navigate = useNavigate();
     return (
         <nav className="ds-navbar">
             <div className="ds-nav-container">
@@ -25,8 +26,34 @@ export default function CustomNavbar() {
                         </a>
                     </div>
                     <ul className="ds-nav-links" id="navLinks">
-                        <li><a href="#" className="ds-nav-link">Home</a></li>
-                        <li><a href="#" className="ds-nav-link">Scholarship</a></li>
+                        <li>
+                            {/*
+                             <Link
+                                to="/dashboard/scholarship">
+                                <span className="ds-nav-link">Scholarships</span>
+                            </Link>
+                            */}
+                            <NavLink
+                                to="/dashboard"
+                               end
+                                     className={({isActive}) => isActive ? "text-warning" : "text-white"}>
+                                Dashboard
+                            </NavLink>
+                        </li>
+
+                        <li>
+                            <NavLink
+                                to="/dashboard/scholarship"
+                                className={({isActive}) => isActive ?
+                                    "text-warning"
+                                    : "text-white"}>
+                                Scholarships
+                            </NavLink>
+                        </li>
+
+
+
+
                         <li><a href="#" className="ds-nav-link">Opportunities</a></li>
                         <li className="ds-dropdown">
                             <div className="ds-dropdown-toggle ds-nav-link">
